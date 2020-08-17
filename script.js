@@ -16,6 +16,39 @@ const starsTotal = 5;
 
 document.addEventListener('DOMContentLoaded', getRatings);
 
+// Form Elements
+const productSelect = document.getElementById('product-select');
+const ratingControl = document.getElementById('rating-control');
+
+// Init product
+
+let product;
+
+// Product select change
+
+productSelect.addEventListener('change', (e) => {
+    product = e.target.value;
+    ratingControl.disabled = false;
+    ratingControl.value = ratings[product]
+});
+
+// Rating control chage
+
+ratingControl.addEventListener('blur', (e) => {
+    const rating = e.target.value;
+
+    // Check for < 5
+    if(rating > 5) {
+        alert('Ratings must be between 1 and 5.');
+        return;
+    };
+
+    // Change rating
+    ratings[product] = rating;
+
+    getRatings();
+});
+
 // Get ratings
 
 function getRatings() {

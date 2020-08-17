@@ -13,7 +13,28 @@
 <title>Ratings</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
+
+        <div class="form-group">
+            <select id="product-select" class="form-control custome-select">
+                <option value="0" disabled selected>Leave your rating</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="number" 
+            id="rating-control" 
+            class="form-control" 
+            step="0.1" 
+            max="5"
+            placeholder="Rate from 1 to 5" disabled>
+        </div>
+
         <table class="table table-striped">
             <thead>
                 <th>Item</th>
