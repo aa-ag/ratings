@@ -1,11 +1,11 @@
 // Initial ratings
 
 let ratings = {
-    one: 4.7,
-    two: 3.4,
-    three: 2.3,
-    four: 3.6,
-    five: 4.1,
+    one: 0,
+    two: 0,
+    three: 0,
+    four: 0,
+    five: 0,
 }
 
 // Total stars
