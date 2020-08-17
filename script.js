@@ -61,9 +61,14 @@ function getRatings() {
 
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
 
-        // // Set width of stars inners to percentage
+        // Set width of stars inners to percentage
 
         document.querySelector(`.${rating} .stars-inner`).style.width = 
         starPercentageRounded;
+
+        // Add number rating
+
+        document.querySelector(`.${rating} .number-rating`).innerHTML = 
+        ratings[rating];
     }
 }
