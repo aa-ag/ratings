@@ -37,8 +37,8 @@ productSelect.addEventListener('change', (e) => {
 ratingControl.addEventListener('blur', (e) => {
     const rating = e.target.value;
 
-    // Check for < 5
-    if(rating > 5) {
+    // Check for range
+    if(rating < 1 || rating > 5) {
         alert('Ratings must be between 1 and 5.');
         return;
     };
